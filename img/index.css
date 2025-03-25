@@ -1,13 +1,16 @@
-body{
-    background-color: #faf7d3;
+body {
+  background-color: #faf7d3;
+  font-family: Arial, sans-serif;
+  transition: margin-right 0.4s;
 }
+
 .sidebar {
   width: 250px;
   height: 100vh;
   position: fixed;
   left: -250px;
   top: 0;
-  background: #333;
+  background: #ffa05779;
   padding-top: 20px;
   transition: left 0.4s;
 }
@@ -17,28 +20,62 @@ body{
 }
 
 .nav-link {
-  color: white;
+  color: #ff2c2c;
   padding: 10px 20px;
   display: block;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  background: #575757;
+  background: #faf7d3;
+  color:#ffa057
 }
 
-.toggle-btn {
+/* New Plus Button Styling */
+.plusButton {
+  --plus_sideLength: 2.5rem;
+  --plus_topRightTriangleSideLength: 0.9rem;
   position: absolute;
   top: 20px;
   right: 20px;
-  background: #333;
-  color: white;
-  border: none;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffa057;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: #ff2c2c;
+  overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: 0.2s ease-in-out;
 }
 
-.toggle-btn.active {
-  transform: rotate(90deg);
+.plusButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent #faf7d3 transparent transparent;
+  transition: 0.2s ease-in-out;
+}
+
+.plusButton.active::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusIcon {
+  fill: #ffa057;
+  width: calc(var(--plus_sideLength) * 0.7);
+  height: calc(var(--plus_sideLength) * 0.7);
+  z-index: 1;
+  transition: 0.2s ease-in-out;
+}
+
+.plusButton.active .plusIcon {
+  fill: #ffa057;
+  transform: rotate(180deg);
 }
