@@ -4,4 +4,3 @@ document.getElementById("menu-btn").addEventListener("click", function() {
     sidebar.classList.toggle("active");
     button.classList.toggle("active");
 });
-
