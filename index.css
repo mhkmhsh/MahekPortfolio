@@ -114,30 +114,3 @@ body{
   display: block;
 }
 
-.container {
-  display: flex;
-  width: 100vh; /* Full viewport height */
-}
-
-.image {
-  flex: 1; /* Takes up half of the container */
-  background-image: url('img/bg1.jpeg'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-}
-
-.text {
-  flex: 1; /* Takes up half of the container */
-  padding: 20px;
-  background-color: #1c2b1d;
-  overflow: auto; /* Allows scrolling if the text overflows */
-  color:#fff9e3;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 15px;
-}
