@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 body{
   background-color:#fff9e3 ;
   overflow: hidden;
+  text-align: center;
 }
 
 .button-container {
@@ -114,3 +116,7 @@ body{
   display: block;
 }
 
+.profile{
+  border-radius: 50% ;
+  border: 5px solid #1c2b1d;
+}
