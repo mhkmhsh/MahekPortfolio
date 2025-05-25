@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url('img/bg2.png');
+  background-image: url('img/bg3.png');
   color: #fff9e3;
   font-family: 'Italiana', serif;
   overflow-y: hidden;
@@ -85,6 +85,7 @@ body {
   font-family: 'Italiana', serif;
   padding: 15px 30px;
   z-index: 2000;
+ 
 }
 
 .navbar ul {
@@ -132,24 +133,8 @@ body {
   font-size: 200px;
 }
 
-.img-1,
-.img-2 {
-  width: 300px;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-color: #fff9e3;
 
-}
 
-/* Optional: give them default images */
-.img-1 {
-  background-image: url('img/1.jpg');
-}
-
-.img-2 {
-  background-image: url('img/3.jpg');
-}
 
 @media (max-width: 768px) {
   .img-2 {
@@ -172,8 +157,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 70px;
-  /* Push content below navbar */
+
   margin: 0;
 }
 
