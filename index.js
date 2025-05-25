@@ -53,3 +53,5 @@ const slides = [
     setInterval(updateSlide, 5000); // Slower interval
   });
   
+
+  
