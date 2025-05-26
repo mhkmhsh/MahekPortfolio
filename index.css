@@ -85,7 +85,7 @@ body {
   font-family: 'Italiana', serif;
   padding: 15px 30px;
   z-index: 2000;
- 
+
 }
 
 .navbar ul {
@@ -113,9 +113,6 @@ body {
   color: #6bb65c;
 }
 
-body {
-  padding-top: 70px;
-}
 
 .container {
   padding: 50px;
@@ -151,7 +148,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100vh - 70px);
+  height:100vh;
   /* Subtract navbar height */
   overflow: hidden;
   display: flex;
