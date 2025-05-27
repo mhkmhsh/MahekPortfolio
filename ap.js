@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       const imgTag = document.createElement("img");
       const randomImageName = generateRandomImageName();
-      imgTag.src = `./assets/${randomImageName}`;
+      imgTag.src = `./ap/${randomImageName}`;
       itemImg.appendChild(imgTag);
   
       const itemName = document.createElement("div");
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       item.addEventListener("click", () => {
         const dataImg = itemName.getAttribute("data-img");
-        const clickedItemImgSrc = `./assets/${dataImg}.png`;
+        const clickedItemImgSrc = `./ap/${dataImg}.png`;
         const clickedItemName = itemName.textContent;
   
         imgViewContainer.innerHTML = `<img src="${clickedItemImgSrc}" alt="${clickedItemName}" />`;
