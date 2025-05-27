@@ -1,30 +1,11 @@
-function generateRandomName() {
-    const characters =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_";
-    const nameLength = Math.floor(Math.random() * 3) + 6;
-
-    let randomName = "";
-    for (let i = 0; i < nameLength; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        randomName += characters.charAt(randomIndex);
-    }
-
-    return randomName + "png"
-}
-
-function generateRandomImageName() {
-    const imageNumber = Math.floor(Math.random() * 40) + 1;
-    return `img${imageNumber}.png`;
-
-}
 document.addEventListener("DOMContentLoaded", function () {
-    const galleryContainer = document.querySelector(".gallary"); // Make sure the class matches HTML
+    const galleryContainer = document.querySelector(".gallary");
     const imgModal = document.querySelector(".img-modal");
     const imgViewContainer = imgModal.querySelector(".img");
     const modalName = imgModal.querySelector(".img-name p");
   
     const tl = gsap.timeline({ paused: true });
-    revealModal(); // Initialize GSAP modal animation
+    revealModal();
   
     function generateRandomName() {
       const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_";
@@ -37,12 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
       return randomName + ".png";
     }
   
-    function generateRandomImageName() {
-      const imageNumber = Math.floor(Math.random() * 40) + 1;
-      return `img${imageNumber}.png`;
+    // Step 1: Generate array of unique image names
+    const imageNames = Array.from({ length: 14 }, (_, i) => `img${i + 1}.png`);
+  
+    // Step 2: Shuffle the array
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
     }
   
-    for (let i = 1; i <= 80; i++) {
+    shuffle(imageNames); // Now images will appear in random order but only once
+  
+    // Step 3: Use each image once
+    imageNames.forEach((imageFile) => {
       const item = document.createElement("div");
       item.classList.add("item");
   
@@ -50,15 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
       itemImg.classList.add("item-img");
   
       const imgTag = document.createElement("img");
-      const randomImageName = generateRandomImageName();
-      imgTag.src = `./ap/${randomImageName}`;
+      imgTag.src = `./ap/${imageFile}`;
       itemImg.appendChild(imgTag);
   
       const itemName = document.createElement("div");
       itemName.classList.add("item-name");
       const randomName = generateRandomName();
       itemName.innerHTML = `<p>${randomName}</p>`;
-      itemName.setAttribute("data-img", randomImageName.replace(".png", ""));
+      itemName.setAttribute("data-img", imageFile.replace(".png", ""));
   
       item.appendChild(itemImg);
       item.appendChild(itemName);
@@ -75,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   
       galleryContainer.appendChild(item);
-    }
+    });
   
     const closeBtn = document.querySelector(".close-btn");
     if (closeBtn) {
