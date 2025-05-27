@@ -93,7 +93,18 @@
   </section>
   
   
-  
+<!-- Popup Modal -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2>Welcome!</h2>
+    <p>Click through this portfolio website to learn more about my art!</p>
+    <p>Check out my instagram for more! </p>
+    <a id="heroButton" class="hero-btn" href="https://www.instagram.com/mahekuarts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+  </div>
+</div>
+
+
   
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -112,6 +123,25 @@
         document.getElementById('main-content').classList.add('show');
       }, 3500);
     });</script>
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "flex";
+      }
+    
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    
+      // Auto-open on page load
+      window.onload = function() {
+        openPopup();
+      };
+      window.onload = function() {
+  setTimeout(openPopup, 5000); 
+};
+
+    </script>
+    
 
 </body>
 
