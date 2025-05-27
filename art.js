@@ -18,20 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
       return randomName + ".png";
     }
   
-   
-    const imageNames = Array.from({ length: 14 }, (_, i) => `img${i + 1}.png`);
+    // Generate array of 16 image file names
+    const imageNames = Array.from({ length: 16 }, (_, i) => `img${i + 1}.png`);
   
-
+    // Shuffle image order
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
     }
+    shuffle(imageNames);
   
-    shuffle(imageNames); 
-  
-  
+    // Create and display gallery items
     imageNames.forEach((imageFile) => {
       const item = document.createElement("div");
       item.classList.add("item");
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       itemImg.classList.add("item-img");
   
       const imgTag = document.createElement("img");
-      imgTag.src = `./ap/${imageFile}`;
+      imgTag.src = `./art/${imageFile}`;
       itemImg.appendChild(imgTag);
   
       const itemName = document.createElement("div");
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       item.addEventListener("click", () => {
         const dataImg = itemName.getAttribute("data-img");
-        const clickedItemImgSrc = `./ap/${dataImg}.png`;
+        const clickedItemImgSrc = `./art/${dataImg}.png`;
         const clickedItemName = itemName.textContent;
   
         imgViewContainer.innerHTML = `<img src="${clickedItemImgSrc}" alt="${clickedItemName}" />`;

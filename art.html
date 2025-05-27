@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mahek's Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Boxicons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <link href="portfolio.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!--LOADER -->
+
+
+  <!--LOADER -->
+  <!--NAVBAR-->
+  <nav class="navbar">
+    <ul class="nav-left">
+      <li><a href="index.html">Mahek Mahesh</a></li>
+    </ul>
+    <ul class="nav-right">
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!--NAVBAR-->
+
+  <!--Content-->  
+<div class="container" data-scroll-container>
+    <h1 data-scroll-section> AP Portfolio </h1>
+    <div class="gallary" data-scroll-section></div>
+</div>
+<div class="img-modal">
+    <div class="img"></div> 
+    <div class="modal-item img-name">
+      <p>img-name</p>
+      <div class="modal-item-revealer"></div>
+    </div>
+    <div class="modal-item close-btn">
+      <p>Close</p>
+      <div class="modal-item-revealer"></div>
+    </div>
+  </div>
+  
+</div>
+  <!--Content-->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kQtW33rZJAHj6wR5mPbKpJr4U6kE5N4I1m3R5g8Y5u7z4k5z5t5z5K5X5X5X5X5X"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+  <!-- Popper.js (required by Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-X9LziNDFzlfxEm3zHhA5HkW7Im74wV5Zu7K/fu1vJvY2+Z+mKjqjxYhEnp0GZNH7"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-YL3NtaZZaU+aFoAxR4zMqUJQGVqydEtvWbJxYmIvTPevTJ1hF7m0xE3KXjWlE1Ip"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-3gJwYp4pA2sHY3jxdpytYUDZfhzGllmJf4Zt78FDmGA=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="art.js"></script>
+  <script>window.addEventListener('load', () => {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth:true,
+        multiplier:0.75,
+        scrollFromAnywhere: true,
+      });
+    });</script>
+
+</body>
+
+</html>
