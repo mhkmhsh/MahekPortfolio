@@ -43,14 +43,17 @@
     <div class="gallary" data-scroll-section></div>
 </div>
 <div class="img-modal">
+    <div class="img"></div> 
     <div class="modal-item img-name">
-        <p>img-name</p>
-        <div class="modal-item-revealer"></div>
+      <p>img-name</p>
+      <div class="modal-item-revealer"></div>
     </div>
     <div class="modal-item close-btn">
-        <p>Close</p>
-        <div class="modal-item-revealer"></div>
+      <p>Close</p>
+      <div class="modal-item-revealer"></div>
     </div>
+  </div>
+  
 </div>
   <!--Content-->
 
@@ -77,10 +80,12 @@
   <!-- Custom JS -->
   <script src="ap.js"></script>
   <script>window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('loader-container').classList.add('hidden');
-        document.getElementById('main-content').classList.add('show');
-      }, 3500);
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth:true,
+        multiplier:0.75,
+        scrollFromAnywhere: true,
+      });
     });</script>
 
 </body>
