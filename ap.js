@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
    
-    const imageNames = Array.from({ length: 14 }, (_, i) => `img${i + 1}.png`);
+    const imageNames = Array.from({ length: 13 }, (_, i) => `img${i + 1}.png`);
   
 
     function shuffle(array) {
