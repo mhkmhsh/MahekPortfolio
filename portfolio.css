@@ -290,8 +290,10 @@ img {
 }
 .img-modal {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: #090909;
   display: flex;
   align-items: center;
@@ -300,30 +302,25 @@ img {
   pointer-events: none;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   overflow: hidden;
-  z-index: 3000;
+  z-index: 9999;
 }
 
 .img-modal .img {
-  /* Remove clip-path from here */
+  width: auto;
+  height: auto;
   max-width: 90vw;
   max-height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: auto;  /* important */
-  width: auto;   /* important */
+  align-items: center;
 }
 
 .img-modal .img img {
-  max-width: 100%;
-  max-height: 100%;
   width: auto;
-  height: auto;
+  height: 100%;
+  max-height: 90vh;
   object-fit: contain;
 }
-
-
-
 
 
 
